@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Furniro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: #f8f9fa;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .brand-name {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color:  #ff6600;
+    }
+
+    .card {
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+   
+
+    .card-title {
+      font-size: 1.25rem;
+      color: #ff6600;
+      font-weight: bold;
+    }
+
+    .breadcrumb-item a {
+      text-decoration: none;
+      color: #ff6600;
+    }
+
+    .breadcrumb-item a:hover {
+      color: #e55a00;
+    }
+
+    .spinner-border {
+      margin-top: 15px;
+    }
+
+    /* Tooltip styles */
+    .tooltip-inner {
+      background-color: #ff6600;
+      color: white;
+      font-weight: bold;
+    }
+
+    .tooltip-arrow {
+      border-top-color: #ff6600;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: #555;
+    }
+
+    .section-heading {
+      color: #ff6600;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body style="background-color: beige;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold brand-name" href="HOME.HTML">Furniro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="HOME.HTML">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="modal2.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="btn btn-outline-primary text-light me-2"><a href="login.html" class="text-primary text-decoration-none">Login</a></button>
+        <a href="signup.html" class="btn btn-primary text-light">Signup</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container mt-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="HOME.HTML">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About</li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="container my-5">
+      <h1 class="display-5 fw-bold text-primary">About Furniro</h1>
+      <p class="lead">We craft furniture that brings warmth, style, and comfort to your home.</p>
+
+      <!-- Loading Spinner -->
+      <div class="text-center mt-5" id="spinner-section">
+        <div class="spinner-border text-primary">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-2">Delivering comfort since 2020</p>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="row mt-4 d-none" id="card-section">
+        <div class="col-md-6">
+          <div class="card" data-bs-toggle="tooltip" data-bs-placement="top" title="Our mission is to create affordable luxury for everyone.">
+            <div class="card-body">
+              <h5 class="card-title">Our Mission <span class="badge bg-success">Core</span></h5>
+              <p class="card-text">
+                To provide premium-quality furniture with a modern aesthetic at affordable prices.
+                At the core of our brand is a commitment to providing premium-quality furniture that blends modern aesthetics with functionality—all at prices that remain accessible. Our goal is to enhance everyday living spaces with furniture that reflects contemporary tastes and stands the test of time.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card" data-bs-toggle="tooltip" data-bs-placement="top" title="We value craftsmanship, sustainability, and customer satisfaction in everything we do.">
+            <div class="card-body">
+              <h5 class="card-title">Why Choose Us <span class="badge bg-warning text-dark">Trusted</span></h5>
+              <p class="card-text">
+                We’ve built our reputation on trust by consistently delivering quality products and exceptional service. From the materials we choose to the final delivery, every step is guided by integrity and transparency. Our customers trust us because we prioritize their needs and ensure every piece of furniture meets the highest standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Section -->
+      <div class="row mt-5 d-none" id="image-section">
+        <div class="col-12">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="img-fluid rounded-4 shadow" alt="Stylish Living Room">
+          <div class="mt-4 text-center">
+            <h2 class="section-heading">Elegant Living, Redefined</h2>
+            <p class="lead">At Furniro, every piece we craft blends comfort, sophistication, and functionality to transform your home into a sanctuary of style. Discover designs that tell your story.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-light text-center py-3">
+    <p>&copy; 2025 FURNIRO. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        document.getElementById('spinner-section').classList.add('d-none');
+        document.getElementById('card-section').classList.remove('d-none');
+        document.getElementById('image-section').classList.remove('d-none');
+      }, 3000); // 3 seconds
+
+      // Enable tooltips
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Furniro - Featured Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: beige;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .product-card {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .product-card img {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .brand-name {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #ff6600;
+      font-family: 'Arial', sans-serif;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-bold brand-name" href="HOME.HTML">Furniro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link "  href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="modal2.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-primary me-2"><a href="login.html">Login</a></button>
+        <a href="signup.html" class="btn btn-primary text-light">Signup</a>
+
+    </div>
+</div>
+</nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h2 class="text-center text-primary mb-4">Featured Products</h2>
+    <div class="row g-4">
+
+      <!-- Product 1 -->
+      <div class="col-md-4">
+        <div class="card product-card" data-bs-toggle="modal" data-bs-target="#productModal1">
+          <img src="https://m.media-amazon.com/images/I/81U5An6OX9L.jpg" class="card-img-top" alt="Modern Sofa">
+          <div class="card-body">
+            <h5 class="card-title">Modern Sofa</h5>
+            <p class="card-text text-muted">Click to view details</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card product-card" data-bs-toggle="modal" data-bs-target="#productModal2">
+          <img src="https://www.hometown.in/cdn/shop/files/HO340KD60FFJHTFUR_1.jpg?v=1744376080" class="card-img-top" alt="Elegant Dining Set">
+          <div class="card-body">
+            <h5 class="card-title">Elegant Dining Set</h5>
+            <p class="card-text text-muted">Click to view details</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-4">
+        <div class="card product-card" data-bs-toggle="modal" data-bs-target="#productModal3">
+          <img src="https://m.media-amazon.com/images/I/7194s2982+L._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="Wooden Wardrobe">
+          <div class="card-body">
+            <h5 class="card-title">Wooden Wardrobe</h5>
+            <p class="card-text text-muted">Click to view details</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-md-4">
+        <div class="card product-card" data-bs-toggle="modal" data-bs-target="#productModal4">
+          <img src="https://m.media-amazon.com/images/I/71pvrP+Ly8L.jpg" class="card-img-top" alt="Office Chair">
+          <div class="card-body">
+            <h5 class="card-title">Ergonomic Office Chair</h5>
+            <p class="card-text text-muted">Click to view details</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-md-4">
+        <div class="card product-card" data-bs-toggle="modal" data-bs-target="#productModal5">
+          <img src="https://images.durian.in/Durian/durian/product/800x800/94461722663396.jpg?tr=w-938,q-100,pr-true" class="card-img-top" alt="King Size Bed">
+          <div class="card-body">
+            <h5 class="card-title">King Size Bed</h5>
+            <p class="card-text text-muted">Click to view details</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-md-4">
+        <div class="card product-card" data-bs-toggle="modal" data-bs-target="#productModal6">
+          <img src="https://images-cdn.ubuy.co.in/63dc07eb2c44894dcb46d125-tree-bookshelf-9-tier-geometric-tree.jpg" class="card-img-top" alt="Bookshelf">
+          <div class="card-body">
+            <h5 class="card-title">Minimalist Bookshelf</h5>
+            <p class="card-text text-muted">Click to view details</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Modals Section -->
+  <!-- Modal templates reused like before (same structure you already have for each product) -->
+
+  <!-- Modal 1 -->
+  <div class="modal fade" id="productModal1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modern Sofa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://m.media-amazon.com/images/I/81U5An6OX9L.jpg" class="img-fluid mb-3">
+          <p>Stylish and cozy sofa perfect for your living room.</p>
+          <p class="fw-bold">Price: Rs.25000</p>
+          <div class="text-center mt-4">
+            <button class="btn btn-primary"><a class="text-light " href="sofacard.html">Add to Cart</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal 2 -->
+    <div class="modal fade" id="productModal2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Elegant Dining Set</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://www.hometown.in/cdn/shop/files/HO340KD60FFJHTFUR_1.jpg?v=1744376080" class="img-fluid mb-3">
+              <p>Elegant and spacious dining set for six.</p>
+              <p class="fw-bold">Price: Rs.30000</p>
+              <div class="text-center mt-4">
+                <button class="btn btn-primary"><a class="text-light" href="diningcard.html">Add to Cart</a></button>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal 3 -->
+      <div class="modal fade" id="productModal3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Wooden Wardrobe</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://m.media-amazon.com/images/I/7194s2982+L._AC_UF894,1000_QL80_.jpg" class="img-fluid mb-3">
+              <p>Spacious wooden wardrobe with multiple compartments.</p>
+              <p class="fw-bold">Price: Rs.15000</p>
+              
+              <!-- Add to Cart Button -->
+              <div class="text-center mt-4">
+                <button class="btn btn-primary"><a class="text-light" href="wardrobecard.html">Add to Cart</a></button>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+      <!-- Modal 4 -->
+      <div class="modal fade" id="productModal4" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Ergonomic Office Chair</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://m.media-amazon.com/images/I/71pvrP+Ly8L.jpg" class="img-fluid mb-3">
+              <p>Comfortable office chair for long working hours.</p>
+              <p class="fw-bold">Price: Rs.8700</p>
+              <div class="text-center mt-4">
+                <button class="btn btn-primary"><a class="text-light" href="chair.html">Add to Cart</a></button>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Modal 5 -->
+      <div class="modal fade" id="productModal5" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">King Size Bed</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://images.durian.in/Durian/durian/product/800x800/94461722663396.jpg?tr=w-938,q-100,pr-true" class="img-fluid mb-3">
+              <p>Luxurious king size bed with premium cushioning.</p>
+              <p class="fw-bold">Price: Rs.23000</p>
+              <div class="text-center mt-4">
+                <button class="btn btn-primary"><a class="text-light" href="bedcard.html">Add to Cart</a></button>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal 6 -->
+      <div class="modal fade" id="productModal6" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Minimalist Bookshelf</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://images-cdn.ubuy.co.in/63dc07eb2c44894dcb46d125-tree-bookshelf-9-tier-geometric-tree.jpg" class="img-fluid mb-3">
+              <p>Space-saving bookshelf with clean modern lines.</p>
+              <p class="fw-bold">Price: Rs.7200</p>
+              <div class="text-center mt-4">
+                <button class="btn btn-primary"><a class="text-light" href="bookshelfcard.html">Add to Cart</a></button>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 <strong>FURNIRO</strong>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furniro - Checkout</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: beige;
+    }
+
+    .brand-name {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #ff6600;
+      font-family: 'Arial', sans-serif;
+      text-decoration: none;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: #333;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #ff6600;
+    }
+
+    .btn-outline-primary {
+      border-color: blue;
+      color: blue;
+    }
+
+    .btn{
+      background-color: #ff6600;
+      border-color: #ff6600;
+    }
+   
+
+    .btn-primary:hover,
+    .btn-outline-primary:hover {
+      background-color: #ff6600;
+      border-color:  #ff6600;
+    }
+
+    .proceed-btn:hover {
+  background-color: #ff6600;
+  border-color: #ff6600;
+}
+
+    .form-container {
+      margin-top: 30px;
+    }
+
+    .form-title {
+      color: #ff6600;
+    }
+
+    .modal-footer .btn-success {
+      background-color: #ff6600;
+      border-color: #ff6600;
+    }
+
+    .modal-footer .btn-success:hover {
+      background-color: #ff4500;
+      border-color: #ff4500;
+    }
+
+    .section-heading {
+      color: #ff6600;
+      font-weight: bold;
+    }
+
+  
+
+    .btn-login:hover, .btn-signup:hover {
+      background-color: #0056b3; /* Darker Blue on hover */
+      border-color: #0056b3;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar brand-name" href="#">Furniro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link " href="HOME.HTML">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="modal2.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="btn btn-outline-primary me-2"><a href="login.html">Login</a></button>
+        <a href="signup.html" class="btn btn-primary text-light">Signup</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Checkout Form -->
+  <div class="container form-container">
+    <h1 class="text-center form-title">Checkout</h1>
+
+    <div class="row">
+      <!-- Billing Address Form -->
+      <div class="col-md-6">
+        <h3 class="section-heading">Billing Address</h3>
+        <form>
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" required>
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" required>
+          </div>
+          <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" required>
+          </div>
+          <div class="mb-3">
+            <label for="zipCode" class="form-label">Zip Code</label>
+            <input type="text" class="form-control" id="zipCode" required>
+          </div>
+          <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <select class="form-select" id="country">
+              <option selected>United States</option>
+              <option value="1">Canada</option>
+              <option value="2">United Kingdom</option>
+              <option value="3">Australia</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <!-- Payment Form -->
+      <div class="col-md-6">
+        <h3 class="section-heading">Payment Information</h3>
+        <form>
+          <div class="mb-3">
+            <label for="cardNumber" class="form-label">Card Number</label>
+            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9101 1121" required>
+          </div>
+          <div class="mb-3">
+            <label for="expDate" class="form-label">Expiration Date</label>
+            <input type="text" class="form-control" id="expDate" placeholder="MM/YY" required>
+          </div>
+          <div class="mb-3">
+            <label for="cvv" class="form-label">CVV</label>
+            <input type="text" class="form-control" id="cvv" placeholder="123" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="saveCard">
+            <label class="form-check-label" for="saveCard">Save card details for future use</label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Payment Button -->
+    <div class="text-center">
+      <button class="btn proceed-btn mt-4 text-light" style="text-decoration: none;"><a class="text-light" href="thankyoubuying.html">Proceed to Payment</a></button>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3 mt-5">
+    <p>&copy; 2025 FURNIRO. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
